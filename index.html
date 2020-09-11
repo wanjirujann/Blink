@@ -5,169 +5,315 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/core.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.steps.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <style>
+        body {
+            background: url("assets/img/background.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .nav-tabs.customtab .nav-link:focus,
+        .nav-tabs.customtab .nav-link:hover {
+            color: #ffa600;
+            border: 0;
+        }
+
+        .wizard-content .wizard>.actions>ul>li.disabled>a,
+        .wizard-content .wizard>.actions>ul>li.disabled>a:focus,
+        .wizard-content .wizard>.actions>ul>li.disabled>a:hover {
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-<div class="container">
 
-</div>
-    <div class="card-box">
-        <div class="wizard-content">
-            <form action="">
-                <h5>School Details</h5>
 
-                <section>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/img/wp (6).png" width="100" height="100" alt="">
-                        </div>
+    <div class="container mt-30">
+        <div class=" pd-ltr-20 xs-pd-20-10">
+            <div class="min-height-200px">
 
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">School Name</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-
-                                    <div class="form-group">
-                                        <label for="">School Category</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
+                <div class="card card-box mt-30 mb-30">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/img/logo.png" width="150" height="150" alt="">
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Country</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">City/Town or Village</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
+                            <div class="col-md-8 mt-15">
+
+                                <ul class="nav nav-tabs customtab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#details" role="tab"
+                                            aria-selected="false">School Details</a>
+
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#preferences" role="tab"
+                                            aria-selected="false">Preferences</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#account" role="tab"
+                                            aria-selected="false">Create account</a>
+
+                                    </li>
+                                </ul>
                             </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Email Address</label>
-                            <input type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Code</label>
-                            <input type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Phone Number</label>
-                            <input type="text">
-                        </div>
-
-                    </div>
-                </section>
-
-                <h5>Preferences</h5>
-
-                <section>
-
-                    <h5>Preferences</h5>
-
-                    <div class="row">
-                        <div class="col-md-4">
-
-                            <input type="checkbox" value="Activate student's Mobile app">
-                            <input type="checkbox" value="Allow withdrawals from the student">
-
-
-                            <div class="form-group">
-                                <label>Daily Expenditure Limit by student</label>
-                                <input type="text">
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <h4>Select Card</h4>
-
                         </div>
                     </div>
-                </section>
-                <section>
 
-                    <h5>Create your Administrative Account</h5>
+                    <div class="wizard-content pd-20 ">
+                        <form class="tab-wizard wizard-circle wizard">
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="details" role="tabpanel">
+                                    <div class="pd-20">
+                                        <h5 class="mt-15">School Details</h5>
+                                        <section>
+                                            <div class="row mr-15 ">
 
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/img/background.jpg" width="100" height="100" alt="">
-                        </div>
+                                                <div class="col-md-4 mr-15">
+                                                    <img src="assets/img/camera-placeholder.jpg" class="pd-20 pl-30"
+                                                        width="300" height="250" alt="">
+                                                </div>
 
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">First Name</label>
-                                        <input type="text">
+                                                <div class="col-md-8 pr-30">
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">School Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter your school's name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <label for="">School Category</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Select school category">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">Country</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Select country">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">City/Town or Village</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Select Village">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <label for="">Email Address</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter the school's email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="">Code</label>
+                                                                <input type="number" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <label for="">Phone Number</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter phone number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="tab-pane fade" id="preferences" role="tabpanel">
+                                    <div class="pd-20">
 
-                                    <div class="form-group">
-                                        <label for="">Other Name</label>
-                                        <input type="text">
+                                        <h5 class="mb-15">Preferences</h5>
+
+                                        <section>
+
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                    <h5>Preferences</h5>
+                                                    <div class="custom-control custom-radio mb-5 mt-15">
+                                                        <input type="radio" id="customRadio4" name="customRadio"
+                                                            class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadio4">Activate
+                                                            student's
+                                                            Mobile app</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio mb-5 mt-10">
+                                                        <input type="radio" id="customRadio4" name="customRadio"
+                                                            class="custom-control-input">
+                                                        <label class="custom-control-label" for="customRadio4">Allow
+                                                            withdrawals
+                                                            from the student</label>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label>Daily Expenditure Limit by student</label>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h4>Select Card</h4>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4 mb-15">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                        <div class="col-md-4 mb-15">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                        <div class="col-md-4 mb-15">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <img src="assets/img/camera-placeholder.jpg" class=""
+                                                                width="150" height="150" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="account" role="tabpanel">
+                                    <div class="pd-20">
+
+
+                                        <h5>Create your Administrative Account</h5>
+
+                                        <section>
+
+                                            <h6 class="mt-5">profile</h6>
+
+
+                                            <div class="row">
+                                                <div class="col-md-4 mr-15">
+                                                    <img src="assets/img/camera-placeholder.jpg" class="pd-20 pl-30"
+                                                        width="300" height="250" alt="">
+                                                </div>
+
+                                                <div class="col-md-8">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">First Name</label>
+                                                                <input type="text" class="form-control" placeholder="Enter first name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+
+                                                            <div class="form-group">
+                                                                <label for="">Other Name</label>
+                                                                <input type="text" class="form-control" placeholder="Enter other name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">Designation</label>
+                                                                <input type="text" class="form-control" placeholder="Select designation">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="">Gender</label>
+                                                                <input type="text" class="form-control" placeholder="Select gender">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <label for="">Email Address</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter the school's email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group">
+                                                                <label for="">Code</label>
+                                                                <input type="number" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div class="form-group">
+                                                                <label for="">Phone Number</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter phone number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+                                        </section>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Designation</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="">Gender</label>
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
 
-                        <div class="form-group">
-                            <label for="">Email Address</label>
-                            <input type="text">
-                        </div>
 
-                        <div class="form-group">
-                            <label for="">Code</label>
-                            <input type="text">
-                        </div>
 
-                        <div class="form-group">
-                            <label for="">Phone Number</label>
-                            <input type="text">
-                        </div>
-
+                        </form>
                     </div>
-                </section>
-
-                
-
-
-
-            </form>
+                </div>
+            </div>
         </div>
 
-    </div>
-
+        <script src="assets/js/core.js"></script>
+      
+        <script src="assets/js/jquery.steps.js"></script>
+        <script src="assets/js/steps-setting.js"></script>
+        <script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
